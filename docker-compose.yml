@@ -1,0 +1,4 @@
+version: "3.9"
+services:
+  postgresql-9.5.23-plv8-2.1.2:
+    build: postgresql-9.5.23-plv8-2.1.2
