@@ -3,12 +3,12 @@ FROM postgres:9.5.23
 MAINTAINER Bartek "Draakhan" Szymański <postgres-plv8-docker-images@draakhan.info>
 
 ENV PLV8_VERSION=2.1.2
-ENV MAKE_DEPENDENCIES="vim wget build-essential git python postgresql-server-dev-$PG_MAJOR"
+ENV MAKE_DEPENDENCIES="wget build-essential ca-certificates git python postgresql-server-dev-$PG_MAJOR"
 
 # Build and install plv8 extension from sources.
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y ${MAKE_DEPENDENCIES} \
+    && apt-get install -y --no-install-recommends ${MAKE_DEPENDENCIES} \
     && wget https://github.com/plv8/plv8/archive/v${PLV8_VERSION}.tar.gz \
     && tar -xvzf v${PLV8_VERSION}.tar.gz \
 # The maintainers of the plv8 extension forgot to change the version number in the makefile:
@@ -22,4 +22,7 @@ RUN apt-get update \
     && apt-get remove -y ${MAKE_DEPENDENCIES} \
     && apt-get autoremove -y \
     && rm v${PLV8_VERSION}.tar.gz \
-    && rm -rf plv8-${PLV8_VERSION}
+    && rm -rf plv8-${PLV8_VERSION} \
+    && rm -rf /root/.vpython-root \
+    && rm -rf /root/.vpython_cipd_cache \
+    && rm -rf /var/lib/apt/lists/*
