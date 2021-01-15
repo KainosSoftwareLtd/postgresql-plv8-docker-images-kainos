@@ -1,4 +1,4 @@
-FROM postgres:9.5.23
+FROM postgres:9.6.20
 
 MAINTAINER Bartek "Draakhan" Szymański <postgres-plv8-docker-images@draakhan.info>
 
