@@ -7,7 +7,6 @@ ENV MAKE_DEPENDENCIES="wget build-essential ca-certificates git python postgresq
 
 # Build and install plv8 extension from sources.
 RUN apt-get update \
-    && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends ${MAKE_DEPENDENCIES} \
     && wget https://github.com/plv8/plv8/archive/v${PLV8_VERSION}.tar.gz \
     && tar -xvzf v${PLV8_VERSION}.tar.gz \
