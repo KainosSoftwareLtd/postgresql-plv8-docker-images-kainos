@@ -41,3 +41,39 @@ services:
 
   postgresql-9.6.20-plv8-2.1.2:
     build: postgresql-9.6.20-plv8-2.1.2
+
+  postgresql-10.4-plv8-2.1.2:
+    build: postgresql-10.4-plv8-2.1.2
+
+  postgresql-10.5-plv8-2.1.2:
+    build: postgresql-10.5-plv8-2.1.2
+
+  postgresql-10.6-plv8-2.1.2:
+    build: postgresql-10.6-plv8-2.1.2
+
+  postgresql-10.7-plv8-2.1.2:
+    build: postgresql-10.7-plv8-2.1.2
+
+  postgresql-10.8-plv8-2.1.2:
+    build: postgresql-10.8-plv8-2.1.2
+
+  postgresql-10.9-plv8-2.1.2:
+    build: postgresql-10.9-plv8-2.1.2
+
+  postgresql-10.10-plv8-2.1.2:
+    build: postgresql-10.10-plv8-2.1.2
+
+  postgresql-10.11-plv8-2.1.2:
+    build: postgresql-10.11-plv8-2.1.2
+
+  postgresql-10.12-plv8-2.1.2:
+    build: postgresql-10.12-plv8-2.1.2
+
+  postgresql-10.13-plv8-2.1.2:
+    build: postgresql-10.13-plv8-2.1.2
+
+  postgresql-10.14-plv8-2.1.2:
+    build: postgresql-10.14-plv8-2.1.2
+
+  postgresql-10.15-plv8-2.1.2:
+    build: postgresql-10.15-plv8-2.1.2
