@@ -92,3 +92,6 @@ services:
 
   postgresql-12.10-plv8-2.3.14:
     build: postgresql-12.10-plv8-2.3.14
+
+  postgresql-12.12-plv8-2.3.14:
+    build: postgresql-12.12-plv8-2.3.14
