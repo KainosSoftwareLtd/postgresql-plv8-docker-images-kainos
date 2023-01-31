@@ -22,6 +22,10 @@ Docker images of PostgreSQL with PLV8 extensions installed.
     ```
     docker build postgresql-12.10-plv8-2.3.14
     ```
+   **IMPORTANT**: When you build an image on Apple Mac with M1 / M2, etc. chipset, Docker will build it using `linux/arm64` architecture and the build will fail because `plv8` developers do not currently support this architecture. In this case, run the command below:
+    ```
+   docker build --platform linux/x86_64 postgresql-12.10-plv8-2.3.14
+   ```
 8. When docker finishes building an image, look for the image ID at the end of the docker build log:
     ```
     => => writing image sha256:71119e257b8c271519293393c350b71f50210f8038dad83e0886ce0517f554e8
