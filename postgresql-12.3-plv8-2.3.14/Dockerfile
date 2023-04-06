@@ -3,7 +3,7 @@ FROM postgres:12.3
 MAINTAINER Bartek "Draakhan" Szymański <postgres-plv8-docker-images@draakhan.info>
 
 ENV PLV8_VERSION=2.3.14
-ENV MAKE_DEPENDENCIES="wget build-essential libc++-dev libc++abi-dev pkg-config libtinfo5 ca-certificates git python postgresql-server-dev-$PG_MAJOR"
+ENV MAKE_DEPENDENCIES="procps wget build-essential libc++-dev libc++abi-dev pkg-config libtinfo5 ca-certificates git python postgresql-server-dev-$PG_MAJOR"
 ENV RUNTIME_DEPENDENCIES="libc++1"
 
 # Build and install plv8 extension from sources.
