@@ -95,3 +95,6 @@ services:
 
   postgresql-12.12-plv8-2.3.14:
     build: postgresql-12.12-plv8-2.3.14
+
+  postgresql-13.0-plv8-2.3.15:
+    build: postgresql-13.0-plv8-2.3.15
