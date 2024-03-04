@@ -136,3 +136,7 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij+all,git
+
+# Do not store any sensitive data in the repository (e.g. certificates, trust store, key stores)
+*.pem
+*.crt
