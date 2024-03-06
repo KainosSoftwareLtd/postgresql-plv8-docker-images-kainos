@@ -98,3 +98,6 @@ services:
 
   postgresql-13.0-plv8-2.3.15:
     build: postgresql-13.0-plv8-2.3.15
+
+  postgresql-15.6-plv8-3.1.10:
+    build: postgresql-15.6-plv8-3.1.10
