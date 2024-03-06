@@ -140,3 +140,7 @@ Temporary Items
 # Do not store any sensitive data in the repository (e.g. certificates, trust store, key stores)
 *.pem
 *.crt
+
+# Trash container
+.trash
+
