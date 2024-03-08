@@ -31,7 +31,9 @@ RUN apt-get update \
     # Disabling direct conversion between v8 and JSONB objects to avoid issues with fhir-engine
     # Fhir-engine was originally implemented to v8 version older than 3.0 which had disabled direct conversion by default
     && sed -i 's/CCFLAGS += -DJSONB_DIRECT_CONVERSION/#CCFLAGS += -DJSONB_DIRECT_CONVERSION/' Makefile \
-    && make \
+    # Disabling BigInt breaking change introduced by plv8 3.0
+    # See: https://github.com/plv8/plv8/issues/529
+    && make BIGINT_GRACEFUL=1 \
     && make install \
     && cd .. \
     && apt-get clean \
