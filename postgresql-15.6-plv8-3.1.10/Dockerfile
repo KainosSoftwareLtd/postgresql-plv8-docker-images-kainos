@@ -28,7 +28,7 @@ RUN apt-get update \
     && tar -xvzf v${PLV8_VERSION}.tar.gz \
     # Newer approach described here: https://github.com/plv8/plv8/blob/v3.1.10/docs/BUILDING.md
     && cd plv8-${PLV8_VERSION} || { echo "Missing 'plv8-${PLV8_VERSION}' directory"; exit 1; } \
-    # Disabling direct conversion between v8 and JSONB objects to avoid issues with fhir-engine \
+    # Disabling direct conversion between v8 and JSONB objects to avoid issues with fhir-engine
     # Fhir-engine was originally implemented to v8 version older than 3.0 which had disabled direct conversion by default
     && sed -i 's/CCFLAGS += -DJSONB_DIRECT_CONVERSION/#CCFLAGS += -DJSONB_DIRECT_CONVERSION/' Makefile \
     && make \
