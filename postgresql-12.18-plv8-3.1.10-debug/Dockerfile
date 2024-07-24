@@ -58,5 +58,3 @@ COPY --from=builder /usr/share/postgresql/${PG_MAJOR}/extension/plcoffee* /usr/s
 RUN mkdir -p /var/log/postgres \
   && touch /var/log/postgres/log /var/log/postgres/log.csv \
   && chown -R postgres /var/log/postgres
-
-RUN ln -fs /dev/stderr /var/log/postgres/log
