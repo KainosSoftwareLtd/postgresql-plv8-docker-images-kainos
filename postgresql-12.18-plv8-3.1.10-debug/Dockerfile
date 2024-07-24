@@ -29,7 +29,7 @@ FROM docker.io/library/postgres:${PG_CONTAINER_VERSION}-bullseye AS builder
 ARG DEBIAN_FRONTEND=noninteractive
 RUN set -ex \
   && apt-get update \
-  && apt-get install -y build-essential curl python3 ninja-build git wget postgresql-server-dev-${PG_MAJOR} libtinfo5 pkg-config clang binutils \
+  && apt-get install -y build-essential curl python3 ninja-build git wget postgresql-server-dev-${PG_MAJOR} libtinfo5 pkg-config clang binutils procps \
   && apt-get clean
 ARG PLV8_BRANCH=r3.1
 ENV PLV8_BRANCH=${PLV8_BRANCH}
