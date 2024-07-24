@@ -59,6 +59,4 @@ RUN mkdir -p /var/log/postgres \
   && touch /var/log/postgres/log /var/log/postgres/log.csv \
   && chown -R postgres /var/log/postgres
 
-USER postgres
-
 RUN ln -fs /dev/stderr /var/log/postgres/log
