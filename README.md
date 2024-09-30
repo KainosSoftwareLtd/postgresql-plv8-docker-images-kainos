@@ -41,18 +41,18 @@ Docker images of PostgreSQL with PLV8 extensions installed.
     ```
 9. Tag a new docker image with an appropriate name containing Postgresql and `plv8` extension versions, e.g.:
     ```
-    docker tag 71119e257b8c draakhan/postgresql-plv8:12.10-2.3.14
+    docker tag 71119e257b8c 704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8:12.10-2.3.14
     ```
     You can check if it is tagged correctly by running again `docker images` command:
     ```
-    REPOSITORY                 TAG            IMAGE ID       CREATED             SIZE
-    draakhan/postgresql-plv8   12.10-2.3.14   71119e257b8c   About an hour ago   420MB
+    REPOSITORY                                                                  TAG            IMAGE ID       CREATED             SIZE
+    704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8:12.10-2.3.14   12.10-2.3.14   71119e257b8c   About an hour ago   420MB
     ```
 10. Login to your docker repository (by default, it is [Docker Hub](https://hub.docker.com/)) using `docker login` command and then push the tagged image to the Docker Hub:
     ```
-    docker push draakhan/postgresql-plv8:12.10-2.3.14
+    docker push 704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8:12.10-2.3.14
     ```
 11. Now, you're ready to use the uploaded image in your project's `Dockerfile` by adding this statement:
     ```
-    FROM draakhan/postgresql-plv8:12.10-2.3.14
+    FROM 704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8:12.10-2.3.14
     ```
