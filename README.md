@@ -45,8 +45,8 @@ Docker images of PostgreSQL with PLV8 extensions installed.
     ```
     You can check if it is tagged correctly by running again `docker images` command:
     ```
-    REPOSITORY                                                                  TAG            IMAGE ID       CREATED             SIZE
-    704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8:12.10-2.3.14   12.10-2.3.14   71119e257b8c   About an hour ago   420MB
+    REPOSITORY                                                     TAG            IMAGE ID       CREATED             SIZE
+    704001215623.dkr.ecr.eu-west-2.amazonaws.com/postgresql-plv8   12.10-2.3.14   71119e257b8c   About an hour ago   420MB
     ```
 10. Login to your docker repository (by default, it is [Docker Hub](https://hub.docker.com/)) using `docker login` command and then push the tagged image to the Docker Hub:
     ```
