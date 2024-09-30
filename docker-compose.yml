@@ -101,6 +101,3 @@ services:
 
   postgresql-12.18-plv8-3.1.10:
     build: postgresql-12.18-plv8-3.1.10
-
-  postgresql-12.18-plv8-3.1.10-debug:
-    build: postgresql-12.18-plv8-3.1.10-debug

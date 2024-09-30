@@ -29,7 +29,7 @@ FROM docker.io/library/postgres:${PG_CONTAINER_VERSION}-bullseye AS builder
 ARG DEBIAN_FRONTEND=noninteractive
 RUN set -ex \
   && apt-get update \
-  && apt-get install -y build-essential curl python3 ninja-build git wget postgresql-server-dev-${PG_MAJOR} libtinfo5 pkg-config clang binutils \
+  && apt-get install -y build-essential curl python3 ninja-build git wget postgresql-server-dev-${PG_MAJOR} libtinfo5 pkg-config clang binutils procps lsof man-db manpages-dev \
   && apt-get clean
 ARG PLV8_BRANCH=r3.1
 ENV PLV8_BRANCH=${PLV8_BRANCH}
@@ -58,7 +58,3 @@ COPY --from=builder /usr/share/postgresql/${PG_MAJOR}/extension/plcoffee* /usr/s
 RUN mkdir -p /var/log/postgres \
   && touch /var/log/postgres/log /var/log/postgres/log.csv \
   && chown -R postgres /var/log/postgres
-
-USER postgres
-
-RUN ln -fs /dev/stderr /var/log/postgres/log
